@@ -48,7 +48,7 @@ public class HomeController {
     public String blog(Model model) {
 
         log.info("getMapping -> /  (blog)");
-        return "blog";
+        return "blog-single";
     }
     @PostMapping("sendMessage")
     public String form(Message message) {
