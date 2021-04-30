@@ -22,8 +22,13 @@ public class HomeController {
     }
 
     @GetMapping("about")
-    public String about() {
+    public String about(Model model) {
         log.info("getMapping -> /  (about)");
+        model.addAttribute("research", "Before we started an implementation of our application, " +
+                "we tried to measure our capacity and end user interests");
+        model.addAttribute("desDev", "For designing, we have used Figma which is great tool for designing applications");
+        model.addAttribute("deliver", "For delivering our application, we even have created a web page which people can visit our web page and get fimiliar to our project");
+
         return "about";
     }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -32,7 +32,7 @@
 
 <header class="navigation fixed-top">
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand font-tertiary h3" href="index.html"><img src="/images/logo.png" alt="Myself"></a>
+    <a class="navbar-brand font-tertiary h3" href="index.html"><img src="/images/ada_logo.png" style="width: 90px; height:45px " alt="Myself"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
             aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -80,21 +80,17 @@
 <section class="section pt-5">
   <div class="container">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-12">
+        <center> <h1>Little Introduction</h1></center>
         <p>The app will offer a list of classes, and it shall organize classes by categories like math, language, literature, and physics. Also, it allows its users to search information about the course description. All the materials uploaded to app will be divided into sections and the students can benefit those materials with free of charge. Beside of that, our app will preserve the right of the students and teachers. In case of inappropriate behavior, the user immediately be reported and will be exempted from the right of use. In addition to this, students could be able to meet the teacher online via our app. During the pandemic situations, we saw that compared to student studying at university, school children had more difficulties in terms of lack of such platforms.
-          Thus, this app will help them to get easily adapted with their learning process..</p>
+          Thus, this app will help them to get easily adapted with their learning process.</p>
       </div>
-      <div class="col-md-4 text-center drag-lg-top">
-        <div class="shadow-down mb-4">
-          <img src="/images/about/author.jpg" alt="author" class="img-fluid w-100 rounded-lg border-thick border-white">
-        </div>
-        <img src="/images/about/signature.png" alt="signature" class="img-fluid">
-        <h4>Johnathan Smith</h4>
-      </div>
+
     </div>
   </div>
 </section>
 <!-- /about -->
+
 
 <!-- Work Process -->
 <section class="section">
@@ -105,28 +101,24 @@
       </div>
       <div class="col-lg-3 col-md-4 text-center hover-shadow pt-3">
         <div class="">
-          <img src="/images/icons/plan.png" class="mb-4" alt="icon">
+          <img src="images/icons/plan.png" class="mb-4" alt="icon">
           <h4 class="mb-4">Research and Plan</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.</p>
+          <p th:text="${research}"></p>
         </div>
       </div>
       <div class="col-lg-3 col-md-4 text-center hover-shadow pt-3">
-        <img src="/images/icons/design.png" class="mb-4" alt="icon">
+        <img src="images/icons/design.png" class="mb-4" alt="icon">
         <h4 class="mb-4">Design and Develop</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</p>
+        <p th:text = "${desDev}"></p>
       </div>
       <div class="col-lg-3 col-md-4 text-center hover-shadow pt-3">
-        <img src="/images/icons/print.png" class="mb-4" alt="icon">
+        <img src="images/icons/print.png" class="mb-4" alt="icon">
         <h4 class="mb-4">Deliver</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua.</p>
+        <p  th:text = "${deliver}"></p>
       </div>
     </div>
   </div>
 </section>
-<!-- ./Work Process -->
 
 <!-- team -->
 <section class="section bg-cover" data-background="images/backgrounds/team-bg.png">
@@ -137,7 +129,7 @@
       </div>
       <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
         <div class="card text-center">
-          <img src="/images/testimonial/Shamistan.jpeg" width="386px" height="306px" class="card-img-top">
+          <img src="/images/testimonial/Shamistan.jpeg" style="width: 238px; height: 306px" class="card-img-top">
           <div class="card-body">
             <h4 class="card-title">Shamistan Huseynov</h4>
             <p class="text-light font-secondary">Backend Developer</p>
@@ -146,28 +138,28 @@
       </div>
       <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
         <div class="card text-center">
-          <img src="/images/team/member-1.png" class="card-img-top">
+          <img src="/images/testimonial/Allahverdi.jpeg"  style="width: 238px; height: 306px" class="card-img-top">
           <div class="card-body">
-            <h4 class="card-title">Jack Schenziwe</h4>
-            <p class="text-light font-secondary">Project Manager</p>
+            <h4 class="card-title">Allahverdi Hajiyev</h4>
+            <p class="text-light font-secondary">Frontend Developer</p>
           </div>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
         <div class="card text-center">
-          <images src = "/team/member-2.png" class="card-img-top">
+          <images src = "/images/testimonial/Konul.jpg"  style="width: 238px; height: 306px" class="card-img-top" >
           <div class="card-body">
-            <h4 class="card-title">Jack Schenziwe</h4>
-            <p class="text-light font-secondary">Project Manager</p>
+            <h4 class="card-title">Konul Aliyeva</h4>
+            <p class="text-light font-secondary">UI/UX designer</p>
           </div>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
         <div class="card text-center">
-          <images src = "/team/member-3.png" class="card-img-top">
+          <images src = "/images/testimonial/Gunay.JPG"  style="width: 238px; height: 306px" class="card-img-top">
           <div class="card-body">
-            <h4 class="card-title">Jack Schenziwe</h4>
-            <p class="text-light font-secondary">Project Manager</p>
+            <h4 class="card-title">Gunay Maharramli</h4>
+            <p class="text-light font-secondary">Frontend Developer</p>
           </div>
         </div>
       </div>
@@ -176,43 +168,6 @@
 </section>
 <!-- /team -->
 
-<!-- clients -->
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2 class="section-title">My Clients</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12">
-        <div class="client-logo-slider d-flex align-items-center">
-          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
-                                                                     src="/images/clients-logo/client-logo-1.png" alt="client-logo"></a>
-          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
-                                                                     src="/images/clients-logo/client-logo-2.png" alt="client-logo"></a>
-          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
-                                                                     src="/images/clients-logo/client-logo-3.png" alt="client-logo"></a>
-          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
-                                                                     src="/images/clients-logo/client-logo-4.png" alt="client-logo"></a>
-          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
-                                                                     src="/images/clients-logo/client-logo-5.png" alt="client-logo"></a>
-          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
-                                                                     src="/images/clients-logo/client-logo-1.png" alt="client-logo"></a>
-          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
-                                                                     src="/images/clients-logo/client-logo-2.png" alt="client-logo"></a>
-          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
-                                                                     src="/images/clients-logo/client-logo-3.png" alt="client-logo"></a>
-          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
-                                                                     src="/images/clients-logo/client-logo-4.png" alt="client-logo"></a>
-          <a href="#" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
-                                                                     src="/images/clients-logo/client-logo-5.png" alt="client-logo"></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /clients -->
 
 <!-- contact -->
 <section class="section section-on-footer" data-background="images/backgrounds/bg-dots.png">
@@ -253,24 +208,24 @@
       <div class="row">
         <div class="col-md-4">
           <h5 class="text-light">Email</h5>
-          <p class="text-white paragraph-lg font-secondary">steve.fruits@email.com</p>
+          <p class="text-white paragraph-lg font-secondary">edu.app.azerbaijan@email.com</p>
         </div>
         <div class="col-md-4">
           <h5 class="text-light">Phone</h5>
-          <p class="text-white paragraph-lg font-secondary">+880 2544 658 256</p>
+          <p class="text-white paragraph-lg font-secondary">+994 50 981 89 97</p>
         </div>
         <div class="col-md-4">
           <h5 class="text-light">Address</h5>
-          <p class="text-white paragraph-lg font-secondary">125/A, CA Commercial Area, California, USA</p>
+          <p class="text-white paragraph-lg font-secondary">14/B Garadagh, Baku, Azerbaijan</p>
         </div>
       </div>
     </div>
   </div>
   <div class="border-top text-center border-dark py-5">
     <p class="mb-0 text-light">Copyright ©<script>
-        var CurrentYear = new Date().getFullYear()
-        document.write(CurrentYear)
-      </script> a theme by <a href="https://themefisher.com">themefisher.com</a></p>
+      var CurrentYear = new Date().getFullYear()
+      document.write(CurrentYear)
+    </script> a theme by <a href="https://www.ada.edu.az/">ada.edu.az</a></p>
   </div>
 </footer>
 <!-- /footer -->
